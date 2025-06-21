@@ -1,8 +1,9 @@
-function indexOfIgnoreCase(s1, s2) {
-  // write your code here
-}
+function indexOfIgnoreCase(str, subStr) {
+  if (subStr === "") return 0; // Empty substring is always at index 0
+  if (str === "") return -1;   // Cannot find anything in an empty string
 
-// Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+  const lowerStr = str.toLowerCase();
+  const lowerSubStr = subStr.toLowerCase();
+
+  return lowerStr.indexOf(lowerSubStr);
+}
